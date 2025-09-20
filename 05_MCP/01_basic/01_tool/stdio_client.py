@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding:utf-8 -*-
-# stdio_client.py
-# @time:2025/9/14/21:42
 from openai import OpenAI
 from mcp.client.stdio import StdioServerParameters, stdio_client
 from mcp import ClientSession
@@ -9,8 +5,9 @@ from contextlib import AsyncExitStack
 import os, dotenv, asyncio, json
 
 
-dotenv.load_dotenv()
+dotenv.load_dotenv(dotenv.find_dotenv())
 
+print(f"DEEPSEEK_API_KEY = {os.getenv('DEEPSEEK_API_KEY')}")
 
 class MCPClient():
     def __init__(self, server_path: str):
