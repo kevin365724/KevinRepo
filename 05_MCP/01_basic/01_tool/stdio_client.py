@@ -4,10 +4,7 @@ from mcp import ClientSession
 from contextlib import AsyncExitStack
 import os, dotenv, asyncio, json
 
-
-dotenv.load_dotenv(dotenv.find_dotenv())
-
-print(f"DEEPSEEK_API_KEY = {os.getenv('DEEPSEEK_API_KEY')}")
+dotenv.load_dotenv("/Users/kevin/Documents/.env")
 
 class MCPClient():
     def __init__(self, server_path: str):

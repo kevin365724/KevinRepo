@@ -4,7 +4,7 @@ from mcp import ClientSession
 from contextlib import AsyncExitStack
 import os, dotenv, asyncio, json
 
-dotenv.load_dotenv()
+dotenv.load_dotenv("/Users/kevin/Documents/.env")
 
 class MCPClient():
     def __init__(self, server_path: str):
